@@ -17,6 +17,14 @@
     "build": "swc src -d dist",
     "build:types": "tsc --emitDeclarationOnly",
     "prepare": "npm run build && npm run build:types",
-    "translate": "node ./dist/index.js"
+    "translate": "node ./dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DIEGOHORVATTI/translate-i18n.git"
   }
 }
