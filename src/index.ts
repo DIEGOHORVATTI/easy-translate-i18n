@@ -1,6 +1,6 @@
 import { config } from '@/config';
 
-import { createLanguageFile } from './createLanguageFile';
+import { createLanguageFile } from './shared/createLanguageFile';
 
 export const start = async (): Promise<void> => {
   const totalLanguages = config.locales.length;

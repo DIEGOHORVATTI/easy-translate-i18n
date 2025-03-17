@@ -2,11 +2,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 import { config } from '@/config';
-import { getLocalePath } from './utils/getLocalePath';
+import { getLocalePath } from '../utils/getLocalePath';
 
-import { updateNestedKeys } from './utils/updateNestedKeys';
-import { translateValue } from './utils/translateValue';
-import { logProgress } from './utils/logProgress';
+import { updateNestedKeys } from '../utils/updateNestedKeys';
+import { translateValue } from '../utils/translateValue';
+import { logProgress } from '../utils/logProgress';
 
 import type { SupportedLanguage } from '@/utils/languages';
 
