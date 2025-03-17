@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 import { i18nConfig } from '@/config';
+import { getLocalePath } from './utils/getLocalePath';
 
 import { updateNestedKeys } from './utils/updateNestedKeys';
 import { translateValue } from './utils/translateValue';
@@ -9,10 +10,7 @@ import { logProgress } from './utils/logProgress';
 
 import type { SupportedLanguage } from '@/utils/languages';
 
-const ptBrFilePath = path.resolve(
-  __dirname,
-  `./locales/${i18nConfig.defaultLocale}.json`
-);
+const ptBrFilePath = getLocalePath(i18nConfig.defaultLocale);
 
 const translations: Record<string, any> = JSON.parse(
   fs.readFileSync(ptBrFilePath, 'utf-8')
@@ -23,7 +21,13 @@ export const createLanguageFile = async (
   total: number,
   index: number
 ): Promise<void> => {
-  const filePath = path.resolve(__dirname, `./locales/${value}.json`);
+  const filePath = getLocalePath(value);
+
+  // Ensure directory exists
+  const directory = path.dirname(filePath);
+  if (!fs.existsSync(directory)) {
+    fs.mkdirSync(directory, { recursive: true });
+  }
 
   const existingContent: Record<string, any> = fs.existsSync(filePath)
     ? JSON.parse(fs.readFileSync(filePath, 'utf-8'))
