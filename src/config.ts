@@ -1,5 +1,5 @@
-import * as fs from 'fs';
-import * as path from 'path';
+import { resolve } from 'node:path';
+import { existsSync } from 'node:fs';
 
 import type { Config } from './types/Config';
 
@@ -18,8 +18,8 @@ function loadExternalConfig(): Partial<Config> {
   ];
 
   for (const configPath of configPaths) {
-    const fullPath = path.resolve(process.cwd(), configPath);
-    if (fs.existsSync(fullPath)) {
+    const fullPath = resolve(process.cwd(), configPath);
+    if (existsSync(fullPath)) {
       try {
         return require(fullPath);
       } catch (error) {
