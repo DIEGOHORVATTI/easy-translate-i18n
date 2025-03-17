@@ -1,0 +1,10 @@
+{
+  "name": "Nom",
+  "email": "E-mail",
+  "phone": "Téléphone",
+  "address": "Adresse",
+  "save": "Sauvegarder",
+  "cancel": "Annuler",
+  "delete": "Supprimer",
+  "countEmails": "Quantité d'e-mails: {{count}}"
+}
