@@ -1,4 +1,4 @@
-import { languageList } from '../../locales/shared/languageList';
+import { languageList } from '../translate/languageList';
 
 import { createLanguageFile } from './createLanguageFile';
 

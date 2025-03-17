@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { Locale } from '@/locales/i18n-config';
+import { Locale } from '@/shared/translate/i18n-config';
 
 export type TranslationOptions = {
   text: string;

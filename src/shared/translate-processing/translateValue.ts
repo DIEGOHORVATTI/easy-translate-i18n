@@ -1,5 +1,5 @@
 import { translatte } from '@/shared/translate/translate';
-import { i18nConfig, Locale } from '@/locales/i18n-config';
+import { i18nConfig, Locale } from '@/shared/translate/i18n-config';
 
 type Props = (
   text: string | Record<string, any> | null,

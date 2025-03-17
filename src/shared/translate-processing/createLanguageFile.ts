@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { i18nConfig, Locale } from '@/locales/i18n-config';
+import { i18nConfig, Locale } from '@/shared/translate/i18n-config';
 
 import { updateNestedKeys } from './updateNestedKeys';
 import { translateValue } from './translateValue';
