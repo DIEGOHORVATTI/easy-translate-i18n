@@ -17,16 +17,23 @@ function loadExternalConfig(): Partial<Config> {
     '.translate-i18nrc.json'
   ];
 
-  for (const configPath of configPaths) {
+  const existingConfigPaths = configPaths.filter((configPath) => {
     const fullPath = resolve(process.cwd(), configPath);
-    if (existsSync(fullPath)) {
-      try {
-        return require(fullPath);
-      } catch (error) {
-        console.warn(`Failed to load config from ${configPath}:`, error);
-      }
+
+    return existsSync(fullPath);
+  });
+
+  for (const configPath of existingConfigPaths) {
+    const fullPath = resolve(process.cwd(), configPath);
+
+    console.log(`Loading config from ${configPath}`);
+    try {
+      return require(fullPath);
+    } catch (error) {
+      console.warn(`Failed to load config from ${configPath}:`, error);
     }
   }
+
   return {};
 }
 

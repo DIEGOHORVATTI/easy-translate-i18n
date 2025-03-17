@@ -1,0 +1,10 @@
+{
+  "name": "名前",
+  "email": "電子メール",
+  "phone": "電話",
+  "address": "住所",
+  "save": "保存",
+  "cancel": "キャンセル",
+  "delete": "消去",
+  "countEmails": "電子メールの数：{{count}}"
+}
