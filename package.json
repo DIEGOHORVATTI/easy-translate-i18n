@@ -2,7 +2,7 @@
   "name": "easy-translate-i18n",
   "version": "1.0.12",
   "bin": {
-    "easy-translate-i18n": "./dist/index.js"
+    "easy-translate-i18n": "./dist/src/index.js"
   },
   "files": [
     "dist"
@@ -15,9 +15,10 @@
   },
   "scripts": {
     "build": "swc src -d dist",
+    "dev": "bun ./src --config tsconfig.json",
     "build:types": "tsc --emitDeclarationOnly",
     "prepare": "npm run build && npm run build:types",
-    "translate": "node ./dist/index.js",
+    "translate": "node ./dist/src/index.js",
     "prepublishOnly": "npm run build"
   },
   "publishConfig": {
