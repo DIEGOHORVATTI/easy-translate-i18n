@@ -2,7 +2,7 @@
   "name": "easy-translate-i18n",
   "version": "1.1.1",
   "bin": {
-    "easy-translate-i18n": "./dist/index.js"
+    "easy-translate-i18n": "./dist/src/index.js"
   },
   "files": [
     "dist"
