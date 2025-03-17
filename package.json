@@ -1,16 +1,8 @@
 {
   "name": "new",
   "version": "1.0.0",
-  "main": "src/index.tsx",
-  "dependencies": {
-    "axios": "latest",
-    "react": "latest",
-    "react-dom": "latest"
-  },
   "devDependencies": {
     "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
     "typescript": "latest"
   },
   "scripts": {
