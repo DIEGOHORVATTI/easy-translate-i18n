@@ -1,6 +1,6 @@
-import { languageList } from '../translate/languageList';
+import { languageList } from '../../translate/languageList';
 
-import { createLanguageFile } from './createLanguageFile';
+import { createLanguageFile } from '../createLanguageFile';
 
 export const generateLanguageFiles = async (): Promise<void> => {
   const totalLanguages = languageList.length;

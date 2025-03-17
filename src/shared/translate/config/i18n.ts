@@ -2,7 +2,7 @@ import es from '@/locales/es.json';
 import ptBR from '@/locales/pt-BR.json';
 import en from '@/locales/en.json';
 
-import { SupportedLanguage } from '@/shared/translate/language';
+import { SupportedLanguage } from '@/utils/language';
 
 export const i18nConfig = {
   defaultLocale: 'pt-BR',

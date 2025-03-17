@@ -1,4 +1,4 @@
-import { Locale } from '@/shared/translate/i18n-config';
+import { Locale } from '@/shared/translate/config/i18n';
 
 type Props = {
   label: string;

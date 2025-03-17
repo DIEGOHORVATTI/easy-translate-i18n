@@ -1,4 +1,4 @@
-import { generateLanguageFiles } from './generateLanguageFiles';
+import { generateLanguageFiles } from './utils/generateLanguageFiles';
 
 generateLanguageFiles()
   .then(() => console.log('Processo concluído.'))

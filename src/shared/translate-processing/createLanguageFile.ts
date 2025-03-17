@@ -1,11 +1,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { i18nConfig, Locale } from '@/shared/translate/i18n-config';
+import { i18nConfig, Locale } from '@/shared/translate/config/i18n';
 
-import { updateNestedKeys } from './updateNestedKeys';
-import { translateValue } from './translateValue';
-import { logProgress } from './logProgress';
+import { updateNestedKeys } from './utils/updateNestedKeys';
+import { translateValue } from './utils/translateValue';
+import { logProgress } from './utils/logProgress';
 
 const ptBrFilePath = path.resolve(
   __dirname,
