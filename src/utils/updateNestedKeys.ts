@@ -1,11 +1,11 @@
-import { Locale } from '@/config';
-
 import { translateValue } from './translateValue';
+
+import { SupportedLanguage } from './languages';
 
 type Props = (
   existingObj: Record<string, any>,
   newObj: Record<string, any>,
-  value: Locale
+  value: SupportedLanguage
 ) => Promise<void>;
 
 export const updateNestedKeys: Props = async (existingObj, newObj, value) => {

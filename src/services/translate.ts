@@ -1,9 +1,9 @@
-import { Locale } from '@/config';
+import { SupportedLanguage } from '@/utils/languages';
 
 export type TranslationOptions = {
   text: string;
-  from: Locale;
-  to: Locale;
+  from: SupportedLanguage;
+  to: SupportedLanguage;
 };
 
 export const translatte = async ({ text, from, to }: TranslationOptions) =>

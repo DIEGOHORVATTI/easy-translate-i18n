@@ -1,11 +1,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { i18nConfig, Locale } from '@/config';
+import { i18nConfig } from '@/config';
 
 import { updateNestedKeys } from './utils/updateNestedKeys';
 import { translateValue } from './utils/translateValue';
 import { logProgress } from './utils/logProgress';
+
+import type { SupportedLanguage } from '@/utils/languages';
 
 const ptBrFilePath = path.resolve(
   __dirname,
@@ -17,7 +19,7 @@ const translations: Record<string, any> = JSON.parse(
 );
 
 export const createLanguageFile = async (
-  value: Locale,
+  value: SupportedLanguage,
   total: number,
   index: number
 ): Promise<void> => {

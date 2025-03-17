@@ -1,9 +1,11 @@
 import { translatte } from '@/services/translate';
-import { i18nConfig, Locale } from '@/config';
+import { i18nConfig } from '@/config';
+
+import type { SupportedLanguage } from './languages';
 
 type Props = (
   text: string | Record<string, any> | null,
-  to: Locale
+  to: SupportedLanguage
 ) => Promise<string | Record<string, any> | null>;
 
 export const translateValue: Props = async (text, to) => {
