@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { i18nConfig, Locale } from '@/shared/translate/config/i18n';
+import { i18nConfig, Locale } from '@/config';
 
 import { updateNestedKeys } from './utils/updateNestedKeys';
 import { translateValue } from './utils/translateValue';
@@ -9,7 +9,7 @@ import { logProgress } from './utils/logProgress';
 
 const ptBrFilePath = path.resolve(
   __dirname,
-  `../../locales/${i18nConfig.defaultLocale}.json`
+  `./locales/${i18nConfig.defaultLocale}.json`
 );
 
 const translations: Record<string, any> = JSON.parse(
@@ -17,12 +17,11 @@ const translations: Record<string, any> = JSON.parse(
 );
 
 export const createLanguageFile = async (
-  language: { value: Locale },
+  value: Locale,
   total: number,
   index: number
 ): Promise<void> => {
-  const { value } = language;
-  const filePath = path.resolve(__dirname, `../../locales/${value}.json`);
+  const filePath = path.resolve(__dirname, `./locales/${value}.json`);
 
   const existingContent: Record<string, any> = fs.existsSync(filePath)
     ? JSON.parse(fs.readFileSync(filePath, 'utf-8'))

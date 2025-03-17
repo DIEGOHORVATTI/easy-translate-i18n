@@ -1,4 +1,4 @@
-import { Locale } from '@/shared/translate/config/i18n';
+import { Locale } from '@/config';
 
 import { translateValue } from './translateValue';
 

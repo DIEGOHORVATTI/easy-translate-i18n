@@ -1,5 +1,5 @@
-import { translatte } from '@/shared/translate/service/translate';
-import { i18nConfig, Locale } from '@/shared/translate/config/i18n';
+import { translatte } from '@/services/translate';
+import { i18nConfig, Locale } from '@/config';
 
 type Props = (
   text: string | Record<string, any> | null,
