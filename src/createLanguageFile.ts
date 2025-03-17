@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { i18nConfig } from '@/config';
+import { config } from '@/config';
 import { getLocalePath } from './utils/getLocalePath';
 
 import { updateNestedKeys } from './utils/updateNestedKeys';
@@ -10,7 +10,7 @@ import { logProgress } from './utils/logProgress';
 
 import type { SupportedLanguage } from '@/utils/languages';
 
-const ptBrFilePath = getLocalePath(i18nConfig.defaultLocale);
+const ptBrFilePath = getLocalePath(config.defaultLocale);
 
 const translations: Record<string, any> = JSON.parse(
   fs.readFileSync(ptBrFilePath, 'utf-8')

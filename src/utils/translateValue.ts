@@ -1,5 +1,5 @@
 import { translatte } from '@/services/translate';
-import { i18nConfig } from '@/config';
+import { config } from '@/config';
 
 import type { SupportedLanguage } from './languages';
 
@@ -13,7 +13,7 @@ export const translateValue: Props = async (text, to) => {
     const translatedText = await translatte({
       text,
       to,
-      from: i18nConfig.defaultLocale
+      from: config.defaultLocale
     });
 
     return translatedText;

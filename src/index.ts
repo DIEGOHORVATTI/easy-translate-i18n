@@ -1,12 +1,12 @@
-import { i18nConfig } from '@/config';
+import { config } from '@/config';
 
 import { createLanguageFile } from './createLanguageFile';
 
 export const start = async (): Promise<void> => {
-  const totalLanguages = i18nConfig.locales.length;
+  const totalLanguages = config.locales.length;
 
   for (let index = 0; index < totalLanguages; index++) {
-    const value = i18nConfig.locales[index];
+    const value = config.locales[index];
 
     console.log(`\n------------------------\nArquivo de output: ${value}`);
 

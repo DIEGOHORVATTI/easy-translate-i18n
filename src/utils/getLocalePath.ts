@@ -1,8 +1,8 @@
 import path from 'node:path';
-import { i18nConfig } from '@/config';
+import { config } from '@/config';
 
 export function getLocalePath(locale: string): string {
-  const pattern = i18nConfig.path;
+  const pattern = config.path;
   const localePattern = '{{locale}}';
 
   const relativePath = pattern.replace(localePattern, locale);
