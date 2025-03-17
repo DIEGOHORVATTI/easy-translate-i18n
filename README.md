@@ -1,4 +1,4 @@
-# easy-translate-i18n
+# Easy-translate-i18n
 
 Simple and fast internationalization (i18n) CLI tool for managing JSON translation files.
 
