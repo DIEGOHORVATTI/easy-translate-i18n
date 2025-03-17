@@ -13,5 +13,7 @@
     "@types/react-dom": "latest",
     "typescript": "latest"
   },
-  "scripts": {}
+  "scripts": {
+    "translate": "bun ./src/shared/translate-processing --config tsconfig.json"
+  }
 }

@@ -1,11 +1,15 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { i18nConfig, Locale } from '../../locales/i18n-config';
+import { i18nConfig, Locale } from '@/locales/i18n-config';
+
+import { updateNestedKeys } from './updateNestedKeys';
+import { translateValue } from './translateValue';
+import { logProgress } from './logProgress';
 
 const ptBrFilePath = path.resolve(
   __dirname,
-  `../../../${i18nConfig.defaultLocale}.json`
+  `../../locales/${i18nConfig.defaultLocale}.json`
 );
 
 const translations: Record<string, any> = JSON.parse(
@@ -18,7 +22,7 @@ export const createLanguageFile = async (
   index: number
 ): Promise<void> => {
   const { value } = language;
-  const filePath = path.resolve(__dirname, `../../../${value}.json`);
+  const filePath = path.resolve(__dirname, `../../locales/${value}.json`);
 
   const existingContent: Record<string, any> = fs.existsSync(filePath)
     ? JSON.parse(fs.readFileSync(filePath, 'utf-8'))
