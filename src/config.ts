@@ -11,10 +11,10 @@ const defaultConfig: Config = {
 
 function loadExternalConfig(): Partial<Config> {
   const configPaths = [
-    'translate-i18n.config.js',
-    'translate-i18n.config.json',
-    '.translate-i18nrc',
-    '.translate-i18nrc.json'
+    'easy-translate-i18n.config.js',
+    'easy-translate-i18n.config.json',
+    '.easy-translate-i18nrc',
+    '.easy-translate-i18nrc.json'
   ];
 
   for (const configPath of configPaths) {

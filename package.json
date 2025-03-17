@@ -1,8 +1,8 @@
 {
-  "name": "translate-i18n",
+  "name": "easy-translate-i18n",
   "version": "1.0.8",
   "bin": {
-    "translate-i18n": "./dist/index.js"
+    "easy-translate-i18n": "./dist/index.js"
   },
   "files": [
     "dist"
@@ -25,6 +25,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DIEGOHORVATTI/translate-i18n.git"
+    "url": "git+https://github.com/DIEGOHORVATTI/easy-translate-i18n.git"
   }
 }

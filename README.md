@@ -1,4 +1,4 @@
-# translate-i18n
+# easy-translate-i18n
 
 Simple and fast internationalization (i18n) CLI tool for managing JSON translation files.
 
@@ -14,18 +14,18 @@ Simple and fast internationalization (i18n) CLI tool for managing JSON translati
 
 ```bash
 # npm
-npm install translate-i18n
+npm install easy-translate-i18n
 
 # yarn
-yarn add translate-i18n
+yarn add easy-translate-i18n
 
 # pnpm
-pnpm add translate-i18n
+pnpm add easy-translate-i18n
 ```
 
 ## Quick Start
 
-1. Create a configuration file `translate-i18n.config.json`:
+1. Create a configuration file `easy-translate-i18n.config.json`:
 
 ```json
 {
@@ -38,17 +38,17 @@ pnpm add translate-i18n
 2. Run the translation tool:
 
 ```bash
-npx translate-i18n
+npx easy-translate-i18n
 ```
 
 ## Configuration
 
-You can configure translate-i18n using any of these files:
+You can configure easy-translate-i18n using any of these files:
 
-- `translate-i18n.config.js`
-- `translate-i18n.config.json`
-- `.translate-i18nrc`
-- `.translate-i18nrc.json`
+- `easy-translate-i18n.config.js`
+- `easy-translate-i18n.config.json`
+- `.easy-translate-i18nrc`
+- `.easy-translate-i18nrc.json`
 
 ### Configuration Options
 
@@ -64,10 +64,10 @@ You can configure translate-i18n using any of these files:
 
 ```bash
 # Generate translation files
-npx translate-i18n
+npx easy-translate-i18n
 
 # Watch mode
-npx translate-i18n --watch
+npx easy-translate-i18n --watch
 ```
 
 ### Project Structure
@@ -79,7 +79,7 @@ your-project/
 │       ├── pt-BR.json
 │       ├── en.json
 │       └── es.json
-└── translate-i18n.config.json
+└── easy-translate-i18n.config.json
 ```
 
 ## Contributing
