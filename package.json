@@ -14,7 +14,7 @@
     "typescript": "^5.8.2"
   },
   "scripts": {
-    "build": "swc src -d dist",
+    "build": "swc src -d dist && echo '#!/usr/bin/env node' | cat - dist/src/index.js > temp && mv temp dist/src/index.js && chmod +x dist/src/index.js",
     "dev": "bun ./src --config tsconfig.json",
     "build:types": "tsc --emitDeclarationOnly",
     "prepare": "npm run build && npm run build:types",
