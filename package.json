@@ -1,6 +1,6 @@
 {
   "name": "easy-translate-i18n",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "bin": {
     "easy-translate-i18n": "./dist/index.js"
   },
