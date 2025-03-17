@@ -1,11 +1,22 @@
 {
-  "name": "new",
+  "name": "translate-i18n",
   "version": "1.0.0",
+  "bin": {
+    "translate-i18n": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
+    "@swc/cli": "latest",
+    "@swc/core": "latest",
     "@types/node": "latest",
     "typescript": "latest"
   },
   "scripts": {
-    "translate": "bun ./src --config tsconfig.json"
+    "build": "swc src -d dist",
+    "build:types": "tsc --emitDeclarationOnly",
+    "prepare": "npm run build && npm run build:types",
+    "translate": "node ./dist/index.js"
   }
 }
