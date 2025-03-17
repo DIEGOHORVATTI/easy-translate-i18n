@@ -10,18 +10,14 @@ export type TranslationOptions = {
 
 export const translatte = async ({ text, from, to }: TranslationOptions) =>
   axios
-    .post<string>('translate-google-api-v1.vercel.app/translate', {
+    .post<string>('https://translate-google-api-v1.vercel.app/translate', {
       text,
       from,
       to
     })
     .then((response) => {
-      console.log(response?.data);
-
       return response.data;
     })
     .catch((error) => {
-      console.log(JSON.stringify(error, null, 2));
-
       throw new Error(error);
     });
