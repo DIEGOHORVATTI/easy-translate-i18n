@@ -3,7 +3,6 @@
 Lightweight CLI tool that automatically translates your JSON i18n files using Google Translate. It detects missing keys across locales and fills them in — preserving existing translations and nested structures.
 
 ## Features
-
 - Automatic detection and translation of missing keys
 - Supports 200+ languages via Google Translate
 - Handles nested JSON objects recursively
