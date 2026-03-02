@@ -1,5 +1,4 @@
 # easy-translate-i18n
-
 Lightweight CLI tool that automatically translates your JSON i18n files using Google Translate. It detects missing keys across locales and fills them in — preserving existing translations and nested structures.
 
 ## Features
