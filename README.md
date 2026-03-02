@@ -12,7 +12,6 @@ Lightweight CLI tool that automatically translates your JSON i18n files using Go
 - Fast compilation with SWC
 
 ## Installation
-
 ```bash
 npm install easy-translate-i18n
 # or
